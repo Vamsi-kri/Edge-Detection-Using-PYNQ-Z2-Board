@@ -70,3 +70,26 @@ Sobel-Edge-Detection-Using-FPGA-Phase 1/
 │ └── reference_README.md
 └── phase2_preview/
 └── notes_for_pynq_integration.txt
+
+
+---
+
+## 📊 Expected Results
+- Successful Block Design of Sobel X and Y modules.
+  <img width="1849" height="924" alt="image" src="https://github.com/user-attachments/assets/bed48e03-9ba3-4d4c-b643-fccc3ea08b01" />
+- Synthesis Result
+  <img width="800" height="750" alt="image" src="https://github.com/user-attachments/assets/ef72e4e8-83ee-4dab-929c-0904a59b033c" />
+- Verified edge maps matching software reference.  
+- Resource and timing reports saved in `reports/`.  
+
+---
+
+## 🔭 Future Work (Phase 2)
+- Integrate the Sobel IP into PYNQ-Z2 overlay.  
+- Add AXI DMA for data transfer between PS and PL.  
+- Implement real-time webcam capture and HDMI display.
+
+---
+
+## 📝 License
+Released under the **MIT License**.
