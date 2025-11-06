@@ -71,6 +71,20 @@ Sobel-Edge-Detection-Using-FPGA-Phase 1/
 └── phase2_preview/
 └── notes_for_pynq_integration.txt
 
+---
+
+## ⚡ Power Analysis (Vivado Report)
+
+Power estimation was performed using the implemented netlist.  
+The total on-chip power consumption is **1.7 W**, with the PS7 subsystem contributing the majority.
+
+| Parameter | Value | Notes |
+|------------|--------|-------|
+| Total On-Chip Power | 1.7 W | |
+| Dynamic Power | 1.563 W (92%) | |
+| Static Power | 0.137 W (8%) | |
+| Junction Temperature | 44.6 °C | Safe thermal range |
+| PS7 Contribution | 1.534 W (~96%) | Dominant power component |
 
 ---
 
