@@ -50,3 +50,23 @@ This work forms the foundation for **Phase 2**, which will integrate the design 
 ---
 
 ## 📂 Repository Structure
+Sobel-Edge-Detection-Using-FPGA-Phase 1/
+├── vivado_design/
+│ ├── sobel_x.vhdl / sobel_y.vhdl
+│ ├── sobel_tb.vhdl
+│ ├── sobel_design.bd / .tcl
+│ ├── simulation_results/
+│ │ ├── input_image.txt
+│ │ ├── sobel_output_x.txt
+│ │ └── sobel_output_y.txt
+│ └── reports/
+│ ├── utilization_report.txt
+│ ├── timing_summary.txt
+│ └── power_analysis.txt
+├── docs/
+│ ├── Main reference SobelEdgeDetectionUsingFPGA.pdf
+│ ├── EDGE_DETECTION_USING_PYNQ-Z2_BOARD.pptx
+│ ├── final_report.pdf
+│ └── reference_README.md
+└── phase2_preview/
+└── notes_for_pynq_integration.txt
