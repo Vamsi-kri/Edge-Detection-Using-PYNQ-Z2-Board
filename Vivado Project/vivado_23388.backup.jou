@@ -1,0 +1,124 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Apr 22 16:07:04 2024
+# Process ID: 23388
+# Current directory: C:/Users/sdusane/Downloads/final_project.xpr/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12944 C:\Users\sdusane\Downloads\final_project.xpr\final_project\final_project.xpr
+# Log file: C:/Users/sdusane/Downloads/final_project.xpr/final_project/vivado.log
+# Journal file: C:/Users/sdusane/Downloads/final_project.xpr/final_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.srcs/sources_1/bd/DMA_block/DMA_block.bd}
+ipx::edit_ip_in_project -upgrade true -name sobel_y_v1_0_project -directory C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.tmp/sobel_y_v1_0_project c:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ipdefs/sobel_y_2nd_trail_1.0_0_0_0/component.xml
+update_compile_order -fileset sources_1
+current_project final_project
+current_project sobel_y_v1_0_project
+close_project
+report_ip_status -name ip_status 
+set_property LOCK_UPGRADE 1 [get_bd_cells /gaussian_1]
+set_property LOCK_UPGRADE 1 [get_bd_cells /gaussian_0]
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_intf_nets sobel_y_0_M00_AXIS] [get_bd_intf_nets gaussian_0_M00_AXIS] [get_bd_cells gaussian_0]
+undo
+delete_bd_objs [get_bd_intf_nets sobel_y_0_M00_AXIS] [get_bd_intf_nets gaussian_0_M00_AXIS] [get_bd_cells gaussian_0]
+connect_bd_intf_net [get_bd_intf_pins sobel_y_0/M00_AXIS] [get_bd_intf_pins axi_dma_y/S_AXIS_S2MM]
+delete_bd_objs [get_bd_intf_nets mynewfilter_0_M00_AXIS] [get_bd_intf_nets gaussian_1_M00_AXIS] [get_bd_cells gaussian_1]
+connect_bd_intf_net [get_bd_intf_pins sobel_x_0/M00_AXIS] [get_bd_intf_pins axi_dma_x/S_AXIS_S2MM]
+validate_bd_design
+regenerate_bd_layout -routing
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name sobel_y_v1_0_project -directory C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.tmp/sobel_y_v1_0_project c:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ipdefs/sobel_y_2nd_trail_1.0_0_0_0/component.xml
+update_compile_order -fileset sources_1
+close_project
+ipx::edit_ip_in_project -upgrade true -name mynewfilter_v1_0_project -directory C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.tmp/mynewfilter_v1_0_project c:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ipdefs/mynewfilter_1.0_0_0_0_0_0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 7 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ipdefs/mynewfilter_1.0_0_0_0_0_0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv iu.edu:user:mynewfilter:1.0 [get_ips  DMA_block_mynewfilter_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips DMA_block_mynewfilter_0_0] -no_script -sync -force -quiet
+ipx::edit_ip_in_project -upgrade true -name sobel_y_v1_0_project -directory C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.tmp/sobel_y_v1_0_project c:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ipdefs/sobel_y_2nd_trail_1.0_0_0_0/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ipdefs/sobel_y_2nd_trail_1.0_0_0_0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv iu.edu:user:sobel_y:1.0 [get_ips  DMA_block_sobel_y_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips DMA_block_sobel_y_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.srcs/sources_1/bd/DMA_block/DMA_block.bd]
+catch { config_ip_cache -export [get_ips -all DMA_block_sobel_y_0_0] }
+catch { config_ip_cache -export [get_ips -all DMA_block_mynewfilter_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.srcs/sources_1/bd/DMA_block/DMA_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.srcs/sources_1/bd/DMA_block/DMA_block.bd]
+launch_runs -jobs 8 {DMA_block_sobel_y_0_0_synth_1 DMA_block_mynewfilter_0_0_synth_1}
+export_simulation -of_objects [get_files C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.srcs/sources_1/bd/DMA_block/DMA_block.bd] -directory C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ip_user_files -ipstatic_source_dir C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.cache/compile_simlib/modelsim} {questa=C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.cache/compile_simlib/questa} {riviera=C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.cache/compile_simlib/riviera} {activehdl=C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+ipx::edit_ip_in_project -upgrade true -name sobel_y_v1_0_project -directory C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.tmp/sobel_y_v1_0_project c:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ipdefs/sobel_y_2nd_trail_1.0_0_0_0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ipdefs/sobel_y_2nd_trail_1.0_0_0_0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv iu.edu:user:sobel_y:1.0 [get_ips  DMA_block_sobel_y_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips DMA_block_sobel_y_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.srcs/sources_1/bd/DMA_block/DMA_block.bd]
+catch { config_ip_cache -export [get_ips -all DMA_block_sobel_y_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.srcs/sources_1/bd/DMA_block/DMA_block.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.srcs/sources_1/bd/DMA_block/DMA_block.bd]
+launch_runs -jobs 8 DMA_block_sobel_y_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.srcs/sources_1/bd/DMA_block/DMA_block.bd] -directory C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ip_user_files -ipstatic_source_dir C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.cache/compile_simlib/modelsim} {questa=C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.cache/compile_simlib/questa} {riviera=C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.cache/compile_simlib/riviera} {activehdl=C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+set_property location {2 491 824} [get_bd_cells sobel_y_0]
+set_property location {2 571 339} [get_bd_cells axi_dma_y]
+set_property location {1 540 336} [get_bd_cells axi_dma_y]
+set_property location {2 1093 335} [get_bd_cells processing_system7_0]
+set_property location {4 1924 455} [get_bd_cells axi_smc_1]
+startgroup
+set_property location {2011 225} [get_bd_intf_ports DDR]
+set_property location {2011 245} [get_bd_intf_ports FIXED_IO]
+endgroup
+set_property location {2 1011 281} [get_bd_cells processing_system7_0]
+set_property location {2 1040 -34} [get_bd_cells axi_dma_y]
+set_property location {2 927 912} [get_bd_cells axi_smc_4]
+set_property location {3 1519 871} [get_bd_cells sobel_y_0]
+set_property location {0.5 518 721} [get_bd_cells sobel_y_0]
+set_property location {3 1428 869} [get_bd_cells sobel_y_0]
+set_property location {3 1916 943} [get_bd_cells sobel_y_0]
+set_property location {1.5 1307 856} [get_bd_cells sobel_y_0]
+set_property location {3 1771 898} [get_bd_cells sobel_y_0]
+open_bd_design {C:/Users/sdusane/Downloads/final_project.xpr/final_project/final_project.srcs/sources_1/bd/DMA_block/DMA_block.bd}
+save_bd_design
+archive_project C:/Users/sdusane/Downloads/final_project.xpr/final_project.xpr.zip -temp_dir C:/Users/sdusane/Downloads/final_project.xpr/final_project/.Xil/Vivado-23388-IN-ENGR-SL14304 -force -include_local_ip_cache -include_config_settings

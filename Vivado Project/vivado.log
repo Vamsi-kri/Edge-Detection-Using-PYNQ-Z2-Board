@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Aug 15 16:25:11 2025
+# Process ID: 5932
+# Current directory: C:/VivadoProjects/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13936 C:\VivadoProjects\final_project\final_project.xpr
+# Log file: C:/VivadoProjects/final_project/vivado.log
+# Journal file: C:/VivadoProjects/final_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/VivadoProjects/final_project/final_project.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/sdusane/Downloads/final_project.xpr/final_project/.Xil/Vivado-23388-IN-ENGR-SL14304/PrjAr/_X_' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/VivadoProjects/final_project/final_project.ipdefs/sobel_y_2nd_trail_1.0_0_0_0_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/VivadoProjects/final_project/final_project.ipdefs/mynewfilter_1.0_0_0_0_0_0_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 818.570 ; gain = 202.570
+update_compile_order -fileset sources_1
+open_bd_design {C:/VivadoProjects/final_project/final_project.srcs/sources_1/bd/DMA_block/DMA_block.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc_3
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc_4
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc1
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc_1
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_x
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_y
+Adding cell -- iu.edu:user:mynewfilter:1.0 - sobel_x_0
+Adding cell -- iu.edu:user:sobel_y:1.0 - sobel_y_0
+Successfully read diagram <DMA_block> from BD file <C:/VivadoProjects/final_project/final_project.srcs/sources_1/bd/DMA_block/DMA_block.bd>
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 15 16:27:59 2025...
