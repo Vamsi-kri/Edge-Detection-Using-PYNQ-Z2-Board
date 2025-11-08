@@ -106,4 +106,5 @@ The total on-chip power consumption is **1.7 W**, with the PS7 subsystem contrib
 ---
 
 ## 📝 License
-Released under the **MIT License**.
+This project is licensed under the [MIT License](LICENSE) — feel free to use and modify it with proper credit.
+
